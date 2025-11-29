@@ -11,6 +11,7 @@ public class PatientDaoImpl implements PatientDao{
 	@Override
 	public void save(Patient patient) {
 		patientList.add(patient); // add patient object to the list		
+//		System.out.println(patient.toString());
 	}
 
 	@Override
@@ -50,7 +51,7 @@ public class PatientDaoImpl implements PatientDao{
 				}
 			}
 			if(!found) {
-				throw new PatientNotFoundException("Patient With Id: "+ id + "Not Found");
+				throw new PatientNotFoundException("Patient With Id: "+ id + "Not Found Cannot Delete");
 			}
 	}
 	
